@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Coin Toss</title>
+        <style>
+            body{
+                margin: 20px;
+                background-image:linear-gradient( rgba(184, 179, 179, 0.7), rgba(247, 243, 243, 0.6)),url(coin.jpg);
+                background-size: cover;
+                background-attachment: fixed;
+                height: 100vh;
+            }
+            h1{
+                padding-bottom: 5px;
+                border-bottom: 1px solid #555;
+                width: 60%;
+            }
+            h3{
+                padding: 20px 20px;
+            }
+            button{
+                margin-left:50px;
+                width: 60px;
+                height: 60px;;
+                border-radius: 50%;
+                box-shadow: 3px 14px 11px #555;
+                background-color:rgb(232, 248, 0);
+               
+            }
+            .container{
+                display: table;
+                border-radius: 3px;
+                opacity: 0.9;
+                background-color: rgba(255, 255, 255, 0.7);
+                padding-bottom: 30px;
+                width: 50%
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1> Coin Toss</h1>
+        </div>
+        
+        <div class="container">
+            <div class="message">
+                <h3>Select either Heads or Tails</h3>
+            </div>
+            <button class="btn-heads" type="button">Heads</button>
+            <button class="btn-tails" type="button">Tails</button>
+        </div>
+        
+
+        <script src="app.js"></script>
+    </body>
+</html>
