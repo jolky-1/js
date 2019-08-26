@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Rock Paper Scissors</title>
+
+        <style>
+            button{
+                padding: 5px;
+                margin: 10px;
+            }
+            h1{
+                border-bottom: 1px solid #555;
+                padding-bottom: 5px;
+            }
+            button{
+                border-radius: 2px;
+                box-shadow: 5px 5px 10px #555;
+            }
+            button:active{
+                background-color: orangered;
+                box-shadow: 2px 3px 10px #555;
+                transform: translateY(4px);
+                transition: all .2s;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <h3>Pick one...</h3>
+        <button id="btn-rock">Rock</button>
+        <button id="btn-paper">Paper</button>
+        <button id="btn-scissors">Scissors</button>
+        <script src="app.js"></script>
+    </body>
+</html>
