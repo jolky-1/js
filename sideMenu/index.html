@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sidemenu</title>
+
+        <style>
+            body{
+                margin: 20px;
+                padding: 0;
+                background-color: #fff;
+                box-sizing: border-box;
+            }
+            .menu{
+                padding: 10px;
+                width: 300px;
+                background-color: #555;
+                border-radius: 3px;
+                position:fixed;
+                left: 0px;
+                transition: all 500ms linear;
+                
+            }
+            .menu.active{
+                left: -350px;    
+            }
+            .links{
+                display: grid;
+                background-color: #222222;
+                color: #fff;
+                padding: 8px;
+                list-style: none;
+                margin: 3px;
+                border: 1px solid #fff;
+                justify-items: center;
+            }
+            p{
+                font-size: 20px;
+                margin-left: 20px;
+                padding: 7px;
+                background-color: #222222;
+                list-style: none;
+                color: #fff;
+                width: 20px;
+                text-align: center;
+            }
+            .hide{
+                margin-left: -350px;
+                transition: all 1s ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1> Side menu</h1>
+        </div>
+        <div class="sidemenu">
+            <p> &#9776</p> 
+            <ul class="menu">
+                <li class="links">Home</li>
+                <li class="links">Product</li>
+                <li class="links">About us</li>
+                <li class="links">Contact</li>
+                <li class="links">Q/A</li>
+            </ul>
+        </div>  
+        
+        <script src="app.js"></script>
+    </body>
+</html>
