@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic welcome message</title>
+        <style>
+            .output{
+                width: 200px;
+                height: 100px;
+                color: white;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="output"></div>
+        <button class="btn">Get Message</button>
+
+        <script>
+            const btn = document.querySelector('.btn');
+            const output = document.querySelector('.output');
+            btn.addEventListener('click',showOutput);
+
+            function showOutput(){
+                const date = new Date();
+                let cur = date.getHours();
+                let message;
+                console.log(cur);
+                if(cur>17){
+                    message = "Its evening";
+                    output.style.backgroundColor = "black";
+                    output.style.color = '#555';
+                }else if(cur>12){
+                    message = "its afternoon";
+                    output.style.backgroundColor = "cyan";
+                    output.style.color = '#555';
+                }else if (cur>0){
+                    message = "its morning";
+                    output.style.backgroundColor = "orangered";
+                    output.style.color = '#555';
+                }else{
+                    message = "Something went wrong";
+                }
+                output.innerHTML ="<h1>"+ message + "</h1>";
+            }
+        </script>    
+    </body>
+</html>
