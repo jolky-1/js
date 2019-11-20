@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>JavaScript</title>
+    <style>
+        .player{
+            margin: 50px;
+            border-radius: 3px;
+            max-width: 550px;
+            display: grid;
+            background-color: #666;
+            border: solid 1px #999;
+            box-shadow: 7px 15px 15px rgba(255,69,0,0.7);
+        }
+        .container{
+            margin: 30px;
+            display: grid;
+            grid-template-columns:repeat(3, 150px);
+            grid-gap: 15px;
+            justify-content: space-evenly;
+        }
+        .animal {
+            padding: 10px;
+            display: grid;
+            border: 3px solid orangered;
+            justify-content: center;
+            align-content: center;
+            background-color: #fff;
+            border-radius: 3px;
+            font-size: 30px;
+            transition: all .3s;
+        }
+        .active{
+            background-color: orangered;
+            transform:scale(1.1);
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="player">
+        <div class="container">
+            <div class="animal lion">Lion</div>
+            <div class="animal cougar">Cougar</div>
+            <div class="animal dog">Dog</div>
+        </div>
+    </div>
+    
+    <script>
+        const animals = document.querySelectorAll('.animal');
+        animals.forEach(animal => animal.addEventListener('click', function(){
+            let animal = this.innerHTML;
+            let lowerAnimal = animal.toLowerCase();
+            //makeSound(lowerAnimal);   Shorter code
+            //addStyle(lowerAnimal);    Shorter code
+            playIt(lowerAnimal);
+        }))
+
+        function playIt(name){
+            let activeEle = document.querySelector('.'+name);
+            let sound1 = new Audio("sound/"+name+".mp3");
+                sound1.play();
+            activeEle.classList.add('active');
+            setTimeout(function(){
+                activeEle.classList.remove('active');
+            },300)
+        }
+
+        /*  Shorter code
+        function addStyle(name){      
+            let activeEle = document.querySelector('.'+name);
+            console.log(activeEle);
+            activeEle.classList.add('active');
+            setTimeout(function(){
+                activeEle.classList.remove('active');
+            },300)
+        }
+
+        function makeSound(name){
+            console.log(name);
+            switch(name){
+                case "lion":
+                    let sound1 = new Audio("sound/lion.mp3");
+                    sound1.play();
+                    break;
+                case "cougar":
+                    let sound2 = new Audio("sound/cougar.mp3");
+                    sound2.play();
+                    break;
+                case "dog":
+                    let sound3 = new Audio("sound/dog.mp3");
+                    sound3.play();
+                    break;
+            }
+        }*/     
+    </script>
+</body>
+
+</html>
