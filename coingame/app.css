@@ -1,0 +1,15 @@
+img {
+	width: 100px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+
+#coin{
+	width: 300px;
+}
+
+.score{
+	text-align: center;
+}
+
